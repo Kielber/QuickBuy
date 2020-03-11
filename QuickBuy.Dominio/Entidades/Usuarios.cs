@@ -4,7 +4,7 @@ using System.Text;
 
 namespace QuickBuy.Dominio.Entidades
 {
-    public class Usuarios
+    public class Usuarios : Entidade
     {
         public int Id { get; set; }
         public string Email { get; set; }
@@ -15,5 +15,10 @@ namespace QuickBuy.Dominio.Entidades
         /// usuario pode ter muitos pedidos
         /// </summary>
         public ICollection<Pedido> Pedidos { get; set; }
+
+        public override void Validadte()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
